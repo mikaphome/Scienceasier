@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Easier - Dự án giáo dục Khoa học phi lợi nhuận</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Thanh điều hướng (Navigation Bar) -->
+    <header class="navbar">
+        <div class="logo">Science Easier</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Trang Chủ</a></li>
+                <li><a href="#">Sứ Mệnh & Mục Đích</a></li>
+                <li><a href="#">Kiểm Tra</a></li>
+                <li><a href="#">Đánh Giá</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Nội dung chính -->
+    <main class="main-content">
+        <section class="hero">
+            <h1>Khám Phá Vũ Trụ Khoa Học Lớp 8 - 9</h1>
+            <p>Học Lý - Hóa - Sinh dễ hiểu và thú vị hơn bao giờ hết.</p>
+        </section>
+
+        <!-- Thẻ chọn môn học -->
+        <section class="subjects-container">
+            <div class="subject-card physics" onclick="showTopic('Vật Lý')">
+                <h2>⚛️ Vật Lý</h2>
+                <p>Khám phá các quy luật của vũ trụ và tự nhiên.</p>
+            </div>
+            <div class="subject-card chemistry" onclick="showTopic('Hóa Học')">
+                <h2>🧪 Hóa Học</h2>
+                <p>Thế giới của các nguyên tử, phân tử và phản ứng.</p>
+            </div>
+            <div class="subject-card biology" onclick="showTopic('Sinh Học')">
+                <h2>🧬 Sinh Học</h2>
+                <p>Giải mã sự sống và các hệ sinh thái xung quanh.</p>
+            </div>
+        </section>
+
+        <!-- Khu vực hiển thị chuyên đề khi bấm vào môn -->
+        <section id="topics-display" class="topics-display">
+            <h3 id="subject-title">Chọn một môn học để xem chuyên đề</h3>
+            <div id="topics-list" class="topics-grid"></div>
+        </section>
+    </main>
+
+    <!-- Chân trang (Footer bắt buộc) -->
+    <footer>
+        <p>© 2026 Dự án giáo dục Hóa học phi lợi nhuận cho học sinh Việt Nam. Được tạo ra bởi Ginny Ha với rất nhiều 💚</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

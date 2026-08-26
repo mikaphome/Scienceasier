@@ -1,4 +1,3 @@
-/* Tone màu vũ trụ: Xanh đêm, tím đậm và hiệu ứng sao phát sáng */
 * {
     margin: 0;
     padding: 0;
@@ -53,7 +52,7 @@ body {
     text-shadow: 0 0 8px #38bdf8;
 }
 
-/* Section Hero */
+/* Section Main */
 .main-content {
     flex: 1;
     padding: 40px 20px;
@@ -98,7 +97,7 @@ body {
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
 }
 
-/* Chuyên đề hiển thị */
+/* Chuyên đề */
 .topics-display {
     margin-top: 30px;
     padding: 25px;
@@ -121,15 +120,6 @@ body {
     border-left: 4px solid #38bdf8;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #090a0f;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.9rem;
-    color: #94a3b8;
-}
 /* Quản lý ẩn/hiện các trang */
 .tab-content {
     display: none;
@@ -139,7 +129,6 @@ footer {
     display: block;
 }
 
-/* Khung nội dung cho các trang Liên hệ, Đánh giá, Sứ mệnh */
 .page-card {
     background: rgba(15, 23, 42, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -156,7 +145,7 @@ footer {
     text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
 }
 
-/* Style cho Form Đánh giá */
+/* Form Đánh giá */
 .feedback-form {
     display: flex;
     flex-direction: column;
@@ -185,10 +174,6 @@ footer {
     outline: none;
 }
 
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    border-color: #38bdf8;
-}
-
 .btn-submit {
     padding: 12px;
     background: linear-gradient(90deg, #38bdf8, #818cf8);
@@ -200,12 +185,12 @@ footer {
     transition: 0.3s;
 }
 
-.btn-submit:hover {
-    opacity: 0.9;
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
-}
-
-.contact-info p {
-    margin-bottom: 12px;
-    color: #cbd5e1;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #090a0f;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #94a3b8;
 }

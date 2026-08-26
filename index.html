@@ -12,42 +12,100 @@
         <div class="logo">Science Easier</div>
         <nav>
             <ul>
-                <li><a href="#" class="active">Trang Chủ</a></li>
-                <li><a href="#">Sứ Mệnh & Mục Đích</a></li>
-                <li><a href="#">Kiểm Tra</a></li>
-                <li><a href="#">Đánh Giá</a></li>
-                <li><a href="#">Liên Hệ</a></li>
+                <li><a href="#" onclick="switchTab('home')" id="nav-home" class="active">Trang Chủ</a></li>
+                <li><a href="#" onclick="switchTab('mission')" id="nav-mission">Sứ Mệnh & Mục Đích</a></li>
+                <li><a href="#" onclick="switchTab('quiz')" id="nav-quiz">Kiểm Tra</a></li>
+                <li><a href="#" onclick="switchTab('review')" id="nav-review">Đánh Giá</a></li>
+                <li><a href="#" onclick="switchTab('contact')" id="nav-contact">Liên Hệ</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Nội dung chính -->
+    <!-- NỘI DUNG CHÍNH -->
     <main class="main-content">
-        <section class="hero">
-            <h1>Khám Phá Vũ Trụ Khoa Học Lớp 8 - 9</h1>
-            <p>Học Lý - Hóa - Sinh dễ hiểu và thú vị hơn bao giờ hết.</p>
+        <!-- 1. TRANG CHỦ -->
+        <section id="tab-home" class="tab-content active">
+            <div class="hero">
+                <h1>Khám Phá Vũ Trụ Khoa Học Lớp 8 - 9</h1>
+                <p>Học Lý - Hóa - Sinh dễ hiểu và thú vị hơn bao giờ hết.</p>
+            </div>
+
+            <div class="subjects-container">
+                <div class="subject-card physics" onclick="showTopic('Vật Lý')">
+                    <h2>⚛️ Vật Lý</h2>
+                    <p>Khám phá các quy luật của vũ trụ và tự nhiên.</p>
+                </div>
+                <div class="subject-card chemistry" onclick="showTopic('Hóa Học')">
+                    <h2>🧪 Hóa Học</h2>
+                    <p>Thế giới của các nguyên tử, phân tử và phản ứng.</p>
+                </div>
+                <div class="subject-card biology" onclick="showTopic('Sinh Học')">
+                    <h2>🧬 Sinh Học</h2>
+                    <p>Giải mã sự sống và các hệ sinh thái xung quanh.</p>
+                </div>
+            </div>
+
+            <div id="topics-display" class="topics-display">
+                <h3 id="subject-title">Chọn một môn học để xem chuyên đề</h3>
+                <div id="topics-list" class="topics-grid"></div>
+            </div>
         </section>
 
-        <!-- Thẻ chọn môn học -->
-        <section class="subjects-container">
-            <div class="subject-card physics" onclick="showTopic('Vật Lý')">
-                <h2>⚛️ Vật Lý</h2>
-                <p>Khám phá các quy luật của vũ trụ và tự nhiên.</p>
-            </div>
-            <div class="subject-card chemistry" onclick="showTopic('Hóa Học')">
-                <h2>🧪 Hóa Học</h2>
-                <p>Thế giới của các nguyên tử, phân tử và phản ứng.</p>
-            </div>
-            <div class="subject-card biology" onclick="showTopic('Sinh Học')">
-                <h2>🧬 Sinh Học</h2>
-                <p>Giải mã sự sống và các hệ sinh thái xung quanh.</p>
+        <!-- 2. SỨ MỆNH & MỤC ĐÍCH -->
+        <section id="tab-mission" class="tab-content">
+            <div class="page-card">
+                <h2>🚀 Sứ Mệnh & Mục Đích</h2>
+                <p><strong>Science Easier</strong> là dự án giáo dục phi lợi nhuận được ra đời với mong muốn bình đẳng hóa cơ hội tiếp cận kiến thức Khoa Học Tự Nhiên (Lý - Hóa - Sinh) cho học sinh cấp 2 trên toàn Việt Nam.</p>
+                <p style="margin-top: 15px;">Chúng mình tin rằng Khoa học không hề khô khan nếu được truyền tải bằng hình ảnh trực quan, ngôn ngữ gần gũi và giao diện truyền cảm hứng.</p>
             </div>
         </section>
 
-        <!-- Khu vực hiển thị chuyên đề khi bấm vào môn -->
-        <section id="topics-display" class="topics-display">
-            <h3 id="subject-title">Chọn một môn học để xem chuyên đề</h3>
-            <div id="topics-list" class="topics-grid"></div>
+        <!-- 3. KIỂM TRA -->
+        <section id="tab-quiz" class="tab-content">
+            <div class="page-card">
+                <h2>📝 Góc Kiểm Tra Kiến Thức</h2>
+                <p>Tính năng trắc nghiệm ôn tập theo từng chuyên đề sẽ sớm ra mắt!</p>
+            </div>
+        </section>
+
+        <!-- 4. ĐÁNH GIÁ TRẢI NGHIỆM -->
+        <section id="tab-review" class="tab-content">
+            <div class="page-card">
+                <h2>⭐ Đánh Giá Trải Nghiệm Người Dùng</h2>
+                <p>Cảm nhận của bạn sẽ giúp Science Easier ngày một hoàn thiện hơn!</p>
+                <form class="feedback-form" onsubmit="handleFeedback(event)">
+                    <div class="form-group">
+                        <label>Họ và tên / Biệt danh:</label>
+                        <input type="text" placeholder="Nhập tên của bạn..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Đánh giá dự án:</label>
+                        <select required>
+                            <option value="5">⭐⭐⭐⭐⭐ Cực kỳ dễ hiểu & đẹp mắt</option>
+                            <option value="4">⭐⭐⭐⭐ Tốt, rất hữu ích</option>
+                            <option value="3">⭐⭐⭐ Bình thường, cần cải thiện thêm</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Góp ý của bạn:</label>
+                        <textarea rows="4" placeholder="Viết cảm nhận hoặc ý kiến đóng góp tại đây..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Gửi Đánh Giá</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 5. LIÊN HỆ -->
+        <section id="tab-contact" class="tab-content">
+            <div class="page-card">
+                <h2>📬 Thông Tin Liên Hệ</h2>
+                <div class="contact-info">
+                    <p><strong>Tổ chức:</strong> Dự án Giáo dục Khoa học Phi lợi nhuận của tổ chức Mikap Home - Science Easier</p>
+                    <p><strong>Người sáng lập:</strong> Ginny Ha</p>
+                    <p><strong>Email:</strong> mikaphome@gmail.com </p>
+                    <p><strong>Mục tiêu:</strong> Hỗ trợ học sinh lớp 8-9 yêu thích và giỏi môn Khoa học tự nhiên.</p>
+                </div>
+            </div>
         </section>
     </main>
 

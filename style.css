@@ -195,3 +195,68 @@ footer {
     font-size: 0.9rem;
     color: #94a3b8;
 }
+/* Cửa sổ Modal nổi lên khi bấm vào chuyên đề */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #0f172a;
+    border: 2px solid #38bdf8;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 16px;
+    padding: 35px;
+    position: relative;
+    overflow-y: auto;
+    color: #f1f5f9;
+}
+
+.modal-content h2 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+    padding-right: 40px;
+    font-size: 1.6rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: #ef4444;
+}
+
+.lesson-body h4 {
+    color: #818cf8;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+}
+
+.lesson-body p {
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
